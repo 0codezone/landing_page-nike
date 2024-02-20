@@ -11,11 +11,32 @@ Currently, two official plugins are available:
 
 # Project README
 
-## Day 1: Setting Up Folder Structure, Creating Navbar, Collecting Assets, and Setting Up Custom Tailwind CSS
+Build a stunning Nike landing page,
 
-### Objective:
+## Tech Stack
 
-- Establish the initial project structure
-- Create a Navbar component
-- Collect necessary assets
-- Set up custom Tailwind CSS for styling
+-Tailwind CSS
+-Reactjs
+
+# Features
+
+👉 Complex Hero Section: A visually appealing hero section showcasing key elements.
+
+👉 Popular Products Showcase: A section highlighting popular Nike products
+
+👉 About Us Section: An informative "About Us" section with a unique design.
+
+👉 Special Offers: Showcase special offers in an eye-catching manner
+
+👉 Testimonials: A testimonials section for a captivating user experience
+
+👉 Newsletter Integration: A newsletter section with Tailwind styling, encouraging user engagement
+
+👉 Footer: A comprehensive footer section containing various links
+
+👉 Mobile Responsive: The entire website is responsive across various devices, emphasizing Tailwind's mobile-friendly capabilities.
+
+# Tutorial and Refrence
+
+This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, JavaScript Mastery.
+Thanks to Adrian!
