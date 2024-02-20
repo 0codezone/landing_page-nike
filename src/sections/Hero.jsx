@@ -4,6 +4,7 @@ import ShoeCard from "../compnents/ShoeCard";
 import { shoes, statistics } from "../constants";
 import { bigShoe1 } from "../assets/images";
 import { useState } from "react";
+import { motion } from "framer-motion";
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
   return (
@@ -39,7 +40,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
+      <motion.div
+        className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
         <img
           src={bigShoeImg}
           alt="shoe colletion"
@@ -50,17 +56,21 @@ const Hero = () => {
 
         <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
           {shoes.map((image, index) => (
-            <div key={index}>
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <ShoeCard
                 index={index}
                 imgURL={image}
                 changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
                 bigShoeImg={bigShoeImg}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

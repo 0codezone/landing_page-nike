@@ -1,5 +1,6 @@
 import PopularProductsCard from "../compnents/PopularProductsCard";
 import { products } from "../constants/index";
+import { motion } from "framer-motion";
 
 const PopularProducts = () => {
   return (
@@ -7,7 +8,7 @@ const PopularProducts = () => {
       <div className="flex flex-col justify-start gap-5">
         <h2 className="text-4xl font-palanquin font-bold">
           Our
-          <span className="text-coral-red">Popular</span> Products
+          <span className="text-coral-red"> Popular</span> Products
         </h2>
 
         <p className="lg:max-w-lg mt-2 font-montserrat text-slate-gray ">
@@ -15,11 +16,16 @@ const PopularProducts = () => {
           selections. Descover a world of comfort, design, and value.
         </p>
 
-        <div className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14">
+        <motion.div
+          className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
           {products.map((product, index) => (
             <PopularProductsCard key={index} product={product} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
